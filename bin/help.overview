@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo 'Basic usage:
+
+    asdf install daytona latest
+    asdf global daytona latest
+    daytona server
+'

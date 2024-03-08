@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo 'Project home:  https://github.com/CrouchingMuppet/asdf-daytona'
