@@ -15,21 +15,39 @@
 
 # Dependencies
 
-- `bash`, `curl`: generic POSIX utilities.
+- `bash`, `curl`, `tr`: generic POSIX utilities.
 
 # Install
 
-Plugin:
+mise plugin:
+
+Mise automatically installs plugins.
+
+asdf plugin:
 
 ```shell
 asdf plugin add daytona
 # or
 asdf plugin add daytona https://github.com/CrouchingMuppet/asdf-daytona.git
-# or
-mise use daytona
 ```
 
-Lima:
+Daytona via mise:
+
+```shell
+# Show all installable versions
+mise list-all daytona
+
+# Set a version globally (on your ~/.mise.toml file)
+mise global daytona latest
+
+# Now daytona commands are available
+daytona server
+```
+
+Check [mise-en-place](https://mise.jdx.dev/) documentation for more instructions on how to
+install & manage versions.
+
+Daytona via asdf:
 
 ```shell
 # Show all installable versions (mise can be a drop-in replacement for the asdf command)
@@ -45,7 +63,7 @@ asdf global daytona latest
 daytona server
 ```
 
-Check [mise-en-place](https://mise.jdx.dev/) or [asdf](https://github.com/asdf-vm/asdf) documentation for more instructions on how to install & manage versions.
+Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to install & manage versions.
 
 # Contributing
 
