@@ -29,7 +29,9 @@ list_github_tags() {
 }
 
 list_all_versions() {
-  list_github_tags
+  # CLI releases do not correspond with daytona releases on Github
+  # Hardcoding this for now
+  echo "0.16.11"
 }
 
 download_release() {
@@ -49,7 +51,7 @@ download_release() {
     ;;
   esac
 
-  url="https://download.daytona.io/daytona/v${version}/daytona-$os-$arch"
+  url="https://download.daytona.io/cli/${version}/daytona-$os-$arch"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
